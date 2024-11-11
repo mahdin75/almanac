@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Almanac** is a web-based map application developed for the **GNSS Course** in **Winter 2018** at the **University of Isfahan**. The app uses a **GPS almanac file** to generate a GPS skyplot and display satellite information, including PRN code, altitude, latitude, and longitude (in the WGS84 coordinate system). This project leverages various JavaScript libraries to handle map rendering, satellite data plotting, and UI functionality.
+**Almanac** is a web-based map application developed for the **GNSS Course** as my project in **Winter 2018** at the **University of Isfahan** (where I studied my bachelor's). The app uses a **GPS almanac file** to generate a GPS skyplot and display satellite information, including PRN code, altitude, latitude, and longitude (in the WGS84 coordinate system). This project leverages various JavaScript libraries to handle map rendering, satellite data plotting, and UI functionality.
 
 ## About the Almanac
 
