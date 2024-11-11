@@ -1,0 +1,119 @@
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+      #map {
+        position: fixed;
+        width: 99%;
+        height: 98vh;
+      }
+      #overlay{
+        z-index:1500;
+        background-color: black;
+        opacity: .8;
+        border-radius: 5px;
+        padding: 15px;
+        color: white;
+      }
+
+      .modebar, .modebar--hover{
+        display: none;          
+      }
+      #skyPlot{
+        z-index: 9999;
+        position: fixed;
+        right:10px;
+        top:75px;
+        opacity: .85;
+        display: none
+      }
+      @media only screen and (max-width: 768px) {
+        #btn-container{width:250px;
+        height: 50px;
+        position: fixed;
+        top:10px;
+        z-index: 1555;
+        right:1px}
+
+      }
+      @media only screen and (min-width: 768px) {
+        #btn-container{
+        width:300px;
+        height: 50px;
+        position: fixed;
+        top:10px;
+        z-index: 1555;
+        left:40%
+      }
+
+      }
+      #time{
+        position: fixed;
+        bottom: 10px;
+        background-color: black;
+        opacity: .8;
+        color: white;
+        left:0px;
+        z-index: 1555;
+        padding: 20px 40px;
+      }
+      #date{
+        position: fixed;
+        bottom: 10px;
+        right:0px;
+        background-color: black;
+        opacity: .8;
+        color: white;
+        z-index: 1555;
+        padding: 20px 40px;
+      }
+      
+      .icon-top{
+        margin: auto;
+        background-color: darkred;
+        color: white;
+        border: 1 solid black;
+        padding: 10px;
+        display: none
+      }
+      .ui-dialog{
+        top:100px;
+        z-index: 3000;
+      }
+    </style>
+</head>
+<body>
+  <div id="time"></div>
+  <div id="date"></div>
+
+  <div id="btn-container">
+  <button class="icon-top" id="btn-1">HDOP</button>
+  <button class="icon-top" id="btn-2">VDOP</button>
+  <button class="icon-top" id="btn-3">PDOP</button>
+  <button class="icon-top" id="btn-4">skyPlot</button>
+</div>
+    <a style="display: none" href="/statics/almanac.yuma.week0999.147456.txt">0</a>
+    <div id="overlay"></div>
+    <div id="map"></div>
+    <div id="skyPlot"></div>
+
+
+
+    <div id="dialog-form" title="Enter Coordinate">      
+        <form>
+            <label for="email">Longitude</label><br>
+            <input type="text" name="Longitude" id="Longitude" class="text ui-widget-content ui-corner-all"><br>
+            <label for="name">Latitude</label><br>
+            <input type="text" name="Latitude" id="Latitude" class="text ui-widget-content ui-corner-all"><br>
+        </form>
+      </div>
+
+
+<script src="./index.js">
+</script>
+</body>
+</html>
